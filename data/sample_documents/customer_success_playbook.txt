@@ -1,0 +1,4 @@
+NORTHSTAR CUSTOMER SUCCESS PLAYBOOK
+Synthetic demonstration document. Northstar Analytics and all procedures are fictional.
+
+At-risk accounts are those with no meaningful product activity for 21 days, a renewal within 60 days, or two unresolved high-priority tickets. Customer Success should review usage, open tickets, and recent billing events before outreach. The first outreach should ask about the customer's goal and offer a focused enablement session. Do not promise a product feature or commercial concession without approval. Escalate a potential data-loss incident immediately to the incident lead. Record the outreach outcome and next action in the account notes.

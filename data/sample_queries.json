@@ -1,0 +1,7 @@
+[
+  {"question":"What does the refund policy say about unused annual plans?","expected_tools":["document_search"]},
+  {"question":"What was revenue in the most recent quarter in the sample database?","expected_tools":["execute_sql"]},
+  {"question":"Summarize the fictional company and compare its policy with the product guide.","expected_tools":["document_search","web_search"]},
+  {"question":"Calculate the average order value for completed orders.","expected_tools":["execute_sql","calculator"]},
+  {"question":"What signals identify an at-risk account?","expected_tools":["document_search"]}
+]

@@ -1,0 +1,5 @@
+[
+  {"question":"What is the refund window for an unused annual plan?","expected_terms":["30 calendar days","unused annual subscription"],"expected_tools":["documents"]},
+  {"question":"How many active customers are in the synthetic sample database?","expected_terms":["active","customers"],"expected_tools":["sql"]},
+  {"question":"What criteria make an account at risk?","expected_terms":["21 days","renewal","unresolved"],"expected_tools":["documents"]}
+]
