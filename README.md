@@ -2,6 +2,8 @@
 
 An evidence-first business research application that combines internal documents, read-only SQLite business data, optional public web research, and reusable MCP tools in a stateful LangGraph workflow.
 
+**Live demo:** [Open Northstar Research](https://enterprise-agentic-research-platform-gcp6ywwyrwuexmwox2zb7q.streamlit.app/) · **Source code:** [GitHub repository](https://github.com/Integenpiyush/enterprise-agentic-research-platform)
+
 ## Features
 
 - Upload and ingest PDF, TXT, Markdown, and CSV files with metadata and source citations.
@@ -88,14 +90,9 @@ Run `streamlit run app.py` to explore the four interactive workspace pages. No s
 
 Every bundled document and database record is synthetic. The sample corpus covers a fictional refund policy, annual report summary, product guide, customer success playbook, security overview, and market brief. `data/sample_queries.json` and `data/evaluation_dataset.json` provide demonstration/evaluation prompts.
 
-## Streamlit Community Cloud
+## Live deployment
 
-1. Push this repository to GitHub.
-2. Select `app.py` as the app entry point.
-3. Add `OPENAI_API_KEY` and optional LangSmith settings in the app's Secrets panel.
-4. Install dependencies from `requirements.txt`.
-
-The application is prepared for Community Cloud but has not been deployed. Cloud filesystem storage may be ephemeral; local Chroma indexes, uploaded files, conversations, and checkpoints should be replaced by managed persistent services for a durable deployment. The sample database can be reseeded at startup if needed.
+The public app is deployed on Streamlit Community Cloud: [enterprise-agentic-research-platform](https://enterprise-agentic-research-platform-gcp6ywwyrwuexmwox2zb7q.streamlit.app/). It runs in local evidence mode without an OpenAI key; adding `OPENAI_API_KEY` in Streamlit app secrets enables LLM-backed planning and answers. Cloud filesystem storage may be ephemeral, so local Chroma indexes, uploaded files, conversations, and checkpoints should be replaced by managed persistent services for a durable production deployment.
 
 ## Security and limitations
 
