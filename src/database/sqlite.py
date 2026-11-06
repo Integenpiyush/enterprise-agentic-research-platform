@@ -36,7 +36,10 @@ def validate_select_sql(sql: str) -> str:
         if len(statements) != 1 or statements[0] is None:
             raise SQLValidationError("Only one SQL statement is allowed.")
         node = statements[0]
-        if not (node.key == "SELECT" or node.key == "UNION" or (node.key == "WITH" and node.find(sqlglot.exp.Select))):
+        # Expression.key is lowercase in current sqlglot releases. Normalize it
+        # so read-only SELECT validation behaves consistently across versions.
+        node_kind = str(node.key).upper()
+        if not (node_kind == "SELECT" or node_kind == "UNION" or (node_kind == "WITH" and node.find(sqlglot.exp.Select))):
             raise SQLValidationError("Only SELECT queries are permitted.")
     except ImportError:
         if re.match(r"^WITH\b", query, re.IGNORECASE) and not re.search(r"\bSELECT\b", query, re.IGNORECASE):
